@@ -12,7 +12,6 @@ URL:		http://www.rkeene.org/oss/libconfig/
 Source0:	http://www.rkeene.org/files/oss/libconfig/devel/%{name}-%{version}.tar.gz
 Patch0:     libconfig-0.1.21-DESTDIR.diff
 BuildRequires:	libopennet-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 
 %description
 libconfig - Consistent configuration library.
