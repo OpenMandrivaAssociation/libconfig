@@ -1,11 +1,11 @@
 %define	major 0
 %define libname	%mklibname config %{major}
-%define libnamedevel	%mklibname config
+%define libnamedevel	%mklibname -d config
 
 Summary:	Configuration file parsing library
 Name:		libconfig
 Version:	0.2.3
-Release:	%mkrel 2
+Release:	%mkrel 3
 Group:		System/Libraries
 License:	GPL
 URL:		http://www.rkeene.org/oss/libconfig/
