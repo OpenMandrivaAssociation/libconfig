@@ -2,7 +2,7 @@
 %define libname	%mklibname config %{major}
 %define libnamedevel	%mklibname config
 
-Summary:	Libconfig is a configuration file parsing library
+Summary:	Configuration file parsing library
 Name:		libconfig
 Version:	0.2.3
 Release:	%mkrel 1
@@ -24,7 +24,7 @@ processed with the lc_process(3) function. Errors can be examined
 through lc_geterrno(3) and lc_geterrstr(3).
 
 %package -n	%{libname}
-Summary:	Libconfig is a configuration file parsing library
+Summary:	Configuration file parsing library
 Group:          System/Libraries
 
 %description -n	%{libname}
