@@ -2,10 +2,12 @@
 %define libname	%mklibname config %{major}
 %define libnamedevel	%mklibname -d config
 
+%define _disable_ld_no_undefined 1
+
 Summary:	Configuration file parsing library
 Name:		libconfig
 Version:	0.2.3
-Release:	%mkrel 5
+Release:	%mkrel 6
 Group:		System/Libraries
 License:	GPL
 URL:		http://www.rkeene.org/oss/libconfig/
@@ -61,7 +63,6 @@ files.
 %patch0 -p0 -b .destdir
 
 %build
-
 %configure2_5x
 
 # fix soname
