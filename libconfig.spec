@@ -7,7 +7,7 @@
 Summary:	Configuration file parsing library
 Name:		libconfig
 Version:	0.2.3
-Release:	%mkrel 6
+Release:	%mkrel 7
 Group:		System/Libraries
 License:	GPL
 URL:		http://www.rkeene.org/oss/libconfig/
