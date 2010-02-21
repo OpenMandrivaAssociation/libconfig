@@ -6,15 +6,14 @@
 
 Summary:	Configuration file parsing library
 Name:		libconfig
-Version:	0.2.3
-Release:	%mkrel 7
+Version:	1.4.3
+Release:	%mkrel 1
 Group:		System/Libraries
 License:	GPL
-URL:		http://www.rkeene.org/oss/libconfig/
-Source0:	http://www.rkeene.org/files/oss/libconfig/devel/%{name}-%{version}.tar.gz
-Patch0:     libconfig-0.1.21-DESTDIR.diff
+URL:		http://www.hyperrealm.com/libconfig/
+Source0:	http://www.hyperrealm.com/libconfig/%{name}-%{version}.tar.gz
 BuildRequires:	libopennet-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 libconfig - Consistent configuration library.
@@ -58,20 +57,18 @@ This package contains the static %{name} library and its header
 files.
 
 %prep
-
-%setup -q -n %{name}-%{version}
-%patch0 -p0 -b .destdir
+%setup -q
 
 %build
 %configure2_5x
 
 # fix soname
-perl -pi -e "s|^SHOBJFLAGS.*|SHOBJFLAGS=-Wl,-soname=%{name}.so.%{major} -shared -fPIC -D_REENTRANT|g" Makefile
+#perl -pi -e "s|^SHOBJFLAGS.*|SHOBJFLAGS=-Wl,-soname=%{name}.so.%{major} -shared -fPIC -D_REENTRANT|g" Makefile
 
 %make
 
 %install
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+rm -rf %{buildroot}
 
 %makeinstall_std
 
@@ -84,11 +81,11 @@ perl -pi -e "s|^SHOBJFLAGS.*|SHOBJFLAGS=-Wl,-soname=%{name}.so.%{major} -shared 
 %endif
 
 %clean
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+rm -rf %{buildroot}
 
 %files -n %{libname}
 %defattr(-,root,root)
-%doc Docs/* README
+%doc README
 %{_libdir}/*.so.*
 
 %files -n %{libnamedevel}
@@ -96,5 +93,7 @@ perl -pi -e "s|^SHOBJFLAGS.*|SHOBJFLAGS=-Wl,-soname=%{name}.so.%{major} -shared 
 %{_includedir}/*
 %{_libdir}/*.so
 %{_libdir}/*.a
-%{_mandir}/man3/*
+%{_libdir}/*.la
+%{_libdir}/pkgconfig/*.pc
+%{_infodir}/*
 
