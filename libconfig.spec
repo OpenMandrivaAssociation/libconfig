@@ -7,7 +7,7 @@
 Summary:	Configuration file parsing library
 Name:		libconfig
 Version:	1.4.5
-Release:	%mkrel 1
+Release:	%mkrel 2
 Group:		System/Libraries
 License:	LGPLv2+
 URL:		http://www.hyperrealm.com/libconfig/
