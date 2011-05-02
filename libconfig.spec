@@ -2,8 +2,6 @@
 %define libname	%mklibname config %{major}
 %define libnamedevel	%mklibname -d config
 
-%define _disable_ld_no_undefined 0
-
 Summary:	Configuration file parsing library
 Name:		libconfig
 Version:	1.4.5
@@ -12,7 +10,6 @@ Group:		System/Libraries
 License:	LGPLv2+
 URL:		http://www.hyperrealm.com/libconfig/
 Source0:	http://www.hyperrealm.com/libconfig/%{name}-%{version}.tar.gz
-BuildRequires:	libopennet-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
