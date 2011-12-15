@@ -58,10 +58,8 @@ files.
 %setup -q
 
 %build
-%configure2_5x
-
-# fix soname
-#perl -pi -e "s|^SHOBJFLAGS.*|SHOBJFLAGS=-Wl,-soname=%{name}.so.%{major} -shared -fPIC -D_REENTRANT|g" Makefile
+%configure2_5x \
+	--disable-static
 
 %make
 
