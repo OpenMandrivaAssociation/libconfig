@@ -80,5 +80,4 @@ find %{buildroot} -type f -name "*.la" -exec rm -f {} ';'
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
 %{_infodir}/*
-%{_bindir}/libconfig_tests
 
