@@ -5,7 +5,7 @@
 
 Summary:	Configuration file parsing library
 Name:		libconfig
-Version:	1.4.8
+Version:	1.4.9
 Release:	1
 Group:		System/Libraries
 License:	LGPLv2+
