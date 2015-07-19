@@ -6,7 +6,7 @@
 Summary:	Configuration file parsing library
 Name:		libconfig
 Version:	1.4.9
-Release:	12
+Release:	13
 Group:		System/Libraries
 License:	LGPLv2+
 Url:		http://www.hyperrealm.com/libconfig/
