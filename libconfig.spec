@@ -1,16 +1,16 @@
-%define	major	9
+%define	major	11
 %define libname	%mklibname config %{major}
 %define libxx	%mklibname config++ %{major}
 %define devname	%mklibname -d config
 
 Summary:	Configuration file parsing library
 Name:		libconfig
-Version:	1.4.9
-Release:	13
+Version:	1.7.2
+Release:	1
 Group:		System/Libraries
 License:	LGPLv2+
-Url:		http://www.hyperrealm.com/libconfig/
-Source0:	http://www.hyperrealm.com/libconfig/%{name}-%{version}.tar.gz
+Url:		https://hyperrealm.github.io/libconfig/
+Source0:	https://hyperrealm.github.io/libconfig/dist/libconfig-%{version}.tar.gz
 
 %description
 libconfig - Consistent configuration library.
@@ -78,4 +78,5 @@ files.
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
 %{_infodir}/*
-
+%{_libdir}/cmake/libconfig
+%{_libdir}/cmake/libconfig++
