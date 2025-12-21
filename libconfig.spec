@@ -12,6 +12,11 @@ License:	LGPLv2+
 Url:		https://hyperrealm.github.io/libconfig/
 Source0:	https://hyperrealm.github.io/libconfig/dist/libconfig-%{version}.tar.gz
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 libconfig - Consistent configuration library.
 
