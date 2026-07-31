@@ -5,8 +5,8 @@
 
 Summary:	Configuration file parsing library
 Name:		libconfig
-Version:	1.7.3
-Release:	2
+Version:	1.8.2
+Release:	1
 Group:		System/Libraries
 License:	LGPLv2+
 Url:		https://hyperrealm.github.io/libconfig/
